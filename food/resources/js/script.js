@@ -100,6 +100,23 @@ $('a[href*="#"]')
       icon.removeClass('ion-close-round');
     }
   });
+
+  /* Maps */
+  var map = new GMaps({
+    div: '.map',
+    lat: 42.3528795,
+    lng: -83,
+    zoom: 12
+  });
+
+  map.addMarker({
+    lat: 42.3528795,
+    lng: -83.11,
+    title: 'Detroit',
+    infoWindow: {
+      content: '<p>Our Detroit HQ</p>'
+    }
+  });
   /*
   var waypoints = $('#handler-first').waypoint(function(direction) {
     notify(this.element.id + ' hit 25% from top of window')
